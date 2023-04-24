@@ -17,17 +17,12 @@ export default function IndexPage() {
     <div className="bg-white">
       <Spacing size={20} />
       <Top03 color={colors.gray900}>{`OpenAI - Project`}</Top03>
-      <Spacing size={32} />
-      {/* <Banner
-    className="mx-6"
-    top="풀었던 기록을 확인해보세요"
-    bottom="클릭하여 이동하세요"
-  /> */}
-      <Spacing size={24} />
+      <Spacing size={48} />
       <Border size={16} />
       <Spacing size={8} />
       <Container>
-        <BoxRow onClick={() => push('/start')}>시작하기</BoxRow>
+        <BoxRow onClick={() => push('/complete')}>Complete Mode</BoxRow>
+        <BoxRow onClick={() => push('/chat')}>Chat Mode</BoxRow>
       </Container>
     </div>
   );

@@ -7,13 +7,13 @@ export default async function handler(
 ) {
   const method = req.method;
   if (method === 'POST') {
-    const body = JSON.parse(req.body) as BaseAIInit;
+    const body = JSON.parse(req.body) as ChatAIInit;
 
-    const completion = await openAIStarter.createCompletion(body);
+    const completion = await openAIStarter.createChatCompletion(body);
 
     return res.status(200).json({
-      writer: 'gpt',
-      chat: completion.data.choices[0].text,
+      writer: completion.data.choices[0].message?.role,
+      chat: completion.data.choices[0].message?.content,
       time: new Date(),
       id: new Date().getTime(),
     });

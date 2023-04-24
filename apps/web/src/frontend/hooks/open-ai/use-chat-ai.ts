@@ -1,16 +1,16 @@
 import { useCallback, useState } from 'react';
 import { fetcher } from '@/frontend/lib/apis/fetcher';
 
-export default function useBaseAIInit() {
+export default function useChatAIInit() {
   const [chattings, setChattings] = useState<Chatting[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const getChattings = useCallback(async (query: BaseAIInit) => {
-    if (!query.prompt?.length) return;
+  const getChattings = useCallback(async (query: ChatAIInit) => {
+    if (!query.messages?.length) return;
     setLoading(true);
 
     try {
-      const res = await fetcher<Chatting>(`/openai/completion`, {
+      const res = await fetcher<Chatting>(`/openai/chat-completion`, {
         method: 'POST',
         body: JSON.stringify(query),
       });
@@ -20,7 +20,7 @@ export default function useBaseAIInit() {
           writer: 'me',
           time: new Date().toString(),
           id: new Date().getTime(),
-          chat: query.prompt,
+          chat: query.messages[0]?.content,
         },
         res,
       ]);
