@@ -38,6 +38,8 @@ type CompleteModelsKeys =
   | 'text-davinci-002'
   | 'text-davinci-001';
 
+type ChatModelKeys = 'gpt-3.5-turbo' | 'gpt-3.5-turbo-0301';
+
 interface BaseAIInit {
   model: CompleteModelsKeys;
   prompt: string;
@@ -48,4 +50,15 @@ interface BaseAIInit {
   n?: number; // How many completions to generate for each prompt.
   presence_penalty?: number;
   frequency_penalty?: number;
+}
+
+interface ChatCompletionRequestMessage {
+  role: 'system' | 'user' | 'assistant';
+  content: string;
+  name?: string;
+}
+
+interface ChatAIInit extends Omit<BaseAIInit, 'prompt'> {
+  model: ChatModelKeys;
+  messages: ChatCompletionRequestMessage[];
 }

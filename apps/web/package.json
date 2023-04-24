@@ -12,7 +12,6 @@
     "ui": "workspace:*",
     "mainlib": "*",
     "@prisma/client": "^4.6.1",
-    "@next-auth/prisma-adapter": "1.0.5",
     "@types/lodash": "^4.14.191",
     "@types/uuid": "9.0.0",
     "lodash": "^4.17.21",
