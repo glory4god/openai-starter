@@ -1,0 +1,38 @@
+
+input.b-radio[type='radio'] {
+  display: none;
+}
+input.b-radio[type='radio'] + span {
+  position: relative;
+  display: flex;
+  font-size: var(--font-responsive-16px);
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+  
+}
+input.b-radio[type='radio'] + span::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #adadad;
+  margin-right: 4px;
+}
+input.b-radio[type='radio']:checked + span::before {
+  @apply border-2 border-solid border-red-400;
+}
+input.b-radio[type='radio']:checked + span {
+  @apply text-black ;
+}
+input.b-radio[type='radio']:checked + span::after {
+  @apply bg-red-400;
+  position: absolute;
+  content: '';
+  left: 5px;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

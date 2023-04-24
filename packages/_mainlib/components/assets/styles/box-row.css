@@ -1,0 +1,55 @@
+
+
+.box-row {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  user-select: none;
+  border: 0 solid transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  padding: 16px 20px;
+  width: 100%;
+  border-radius: 16px;
+  -webkit-user-select: none;
+  white-space: pre-line;
+  color: black;
+  transform: scale(1);
+  transition: 0.15s all ease-in-out;
+  text-align: left;
+
+}
+
+.box-row:hover,
+.box-row:focus {
+  text-decoration: none;
+}
+
+.box-row:focus {
+  outline: none;
+}
+
+.box-row:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.box-row:not(:disabled):not(.disabled):active {
+  background-image: none;
+}
+
+@media (pointer: coarse) {
+  .box-row:not(:disabled):not(.disabled):active {
+    background-color: #f2f4f6;
+    transform: scale(0.97);
+  }
+}
+
+.box-row.selected{
+  background-color: #f2f4f6;
+}
+
+.box-row.checked:not(.selected){
+  @apply bg-red-100;
+}

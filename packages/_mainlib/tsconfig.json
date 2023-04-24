@@ -1,0 +1,14 @@
+{
+  "extends": "tsconfig/base.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["components/*"],
+      "constants/*": ["constants/*"],
+      "hooks/*": ["hooks/*"],
+      "utils/*": ["utils/*"],
+    }
+  ,"jsx": "react-jsx"
+  },
+}

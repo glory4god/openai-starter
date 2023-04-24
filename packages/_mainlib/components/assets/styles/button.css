@@ -1,0 +1,156 @@
+
+
+
+.button__transition {
+  transition: all 0.1s ease-in-out;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    user-select: none;
+    border: 0 solid transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    overflow: hidden;
+    transform: translateZ(0);
+    padding: 0;
+
+    color: white;
+}
+.button.button__color-red {
+  @apply bg-red-500;
+}
+.button.button__color-rose {
+  @apply bg-rose-600;
+}
+.button:hover,
+.button:focus {
+    text-decoration: none;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.button:not(:disabled):not(.disabled):active {
+    background-image: none;
+}
+
+.button::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.button__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button.button__color-red::after:hover {
+    @apply bg-red-500;
+  }
+  .button.button__color-rose::after:hover {
+    @apply bg-rose-500;
+  }
+}
+.button.button__color-red:active{
+  @apply bg-red-500;
+} 
+.button.button__color-rose:active{
+  @apply bg-rose-500;
+} 
+
+
+.button__size-big {
+  min-width: 96px;
+  height: 56px;
+  max-height: 56px;
+  padding: 15px 16px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.button__size-big .button__content {
+  min-width: 96px;
+  height: 56px;
+  max-height: 56px;
+  padding: 15px 16px;
+}
+
+.button__size-normal {
+  min-width: 96px;
+  height: 48px;
+  max-height: 48px;
+  padding: 4px 8px;
+  border-radius: 16px;
+}
+
+.button__size-normal .button__content {
+  min-width: 96px;
+  height: 48px;
+  max-height: 56px;
+  padding: 4px 8px;
+}
+
+.button__size-small {
+  min-width: 44px;
+  height: 32px;
+  max-height: 48px;
+  padding: 2px 4px;
+  border-radius: 8px;
+}
+
+.button__size-small .button__content {
+  min-width: 44px;
+  height: 32px;
+  max-height: 56px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+.button.button__color-red:disabled {
+  @apply bg-red-300;
+}
+.button.disabled.button__color-red {
+  @apply bg-red-300;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button.button__color-red:not(.disabled)::after:hover {    
+    @apply bg-red-400;
+  }
+}
+.button.button__color-red:not(.disabled):active{          
+  @apply bg-red-400;
+} 
+.button.button__color-rose:disabled {
+  @apply bg-rose-300;
+}
+.button.disabled.button__color-rose {
+  @apply bg-rose-300;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button.button__color-rose:not(.disabled)::after:hover {    
+    @apply bg-rose-400;
+  }
+}
+.button.button__color-rose:not(.disabled):active{          
+  @apply bg-rose-400;
+} 

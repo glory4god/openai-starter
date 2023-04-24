@@ -1,0 +1,36 @@
+@tailwind base;
+
+@layer base {
+  a,
+  button {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2;
+  }
+
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0; /* or ‘0 0 1em’ if you’re so inclined */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#analytics-bar { 
+  @apply relative w-full bg-gray-200 rounded-lg;
+}
+#analytics-inner-bar { 
+  @apply h-3 rounded-lg transition-all;
+}
+#analytics-inner-bar.pass { 
+  @apply bg-blue-300;
+}
+#analytics-inner-bar.failed { 
+  @apply bg-red-300;
+}
