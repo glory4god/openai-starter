@@ -4,11 +4,7 @@ const dev = process.env.NODE_ENV === 'development';
 // }`;
 
 const V1_API_ROUTES =
-  `${
-    dev
-      ? 'http://localhost:3000/api'
-      : 'https://openai-gpt-project.vercel.app/api'
-  }` + '/v1';
+  `${dev ? 'http://localhost:3000/api' : process.env.SERVICE_API}` + '/v1';
 
 function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
