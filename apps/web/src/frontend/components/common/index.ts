@@ -4,3 +4,4 @@ export { default as Header } from './Header';
 export { default as Menudots } from './Menudots';
 export { default as PrivateRoute } from './PrivateRoute';
 export { default as ModalCtrl } from './ModalCtrl';
+export { default as ChatSkeleton } from './ChatSkeleton';
