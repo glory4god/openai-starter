@@ -1,5 +1,7 @@
-import openAIStarter from '@/backend/lib/openai';
 import { NextApiRequest, NextApiResponse } from 'next';
+
+import openAIStarter from '@/backend/lib/openai';
+import { returnChatCompletionMode } from '@/backend/responses/chat';
 
 export default async function handler(
   req: NextApiRequest,
@@ -11,11 +13,6 @@ export default async function handler(
 
     const completion = await openAIStarter.createChatCompletion(body);
 
-    return res.status(200).json({
-      writer: completion.data.choices[0].message?.role,
-      chat: completion.data.choices[0].message?.content,
-      time: new Date(),
-      id: new Date().getTime(),
-    });
+    return res.status(200).json(returnChatCompletionMode(completion.data));
   }
 }

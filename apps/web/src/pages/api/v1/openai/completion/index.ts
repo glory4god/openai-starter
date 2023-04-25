@@ -1,4 +1,5 @@
 import openAIStarter from '@/backend/lib/openai';
+import { returnCompletionMode } from '@/backend/responses/chat';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -11,12 +12,6 @@ export default async function handler(
 
     const completion = await openAIStarter.createCompletion(body);
 
-    console.log(completion.data);
-    return res.status(200).json({
-      writer: 'gpt',
-      chat: completion.data.choices[0].text,
-      time: new Date(),
-      id: new Date().getTime(),
-    });
+    return res.status(200).json(returnCompletionMode(completion.data));
   }
 }
