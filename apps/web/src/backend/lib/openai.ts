@@ -15,6 +15,5 @@ openAIStarter = new OpenAIApi(configuration);
 if (!global.openAIStarter) {
   global.openAIStarter = new OpenAIApi(configuration);
 }
-
 openAIStarter = global.openAIStarter;
 export default openAIStarter;
