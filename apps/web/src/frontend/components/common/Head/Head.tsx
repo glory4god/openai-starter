@@ -23,6 +23,14 @@ const Head: FC = () => {
         <meta property="og:iamge" content="" />
         <meta property="og:description" content="OpenAI GPT 프로젝트" />
         <link type="image/x-icon" rel="icon" href="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
 
         <meta property="title" content="OpenAI GPT 프로젝트" />
         <meta name="author" content="Yu Hayoung" />
