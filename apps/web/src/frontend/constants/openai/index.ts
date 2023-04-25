@@ -9,3 +9,8 @@ export const OpenAiChatModels: ChatModelKeys[] = [
   'gpt-3.5-turbo',
   'gpt-3.5-turbo-0301',
 ];
+export const OpenAiImageSize: ImageSizeKeys[] = [
+  '256x256',
+  '512x512',
+  '1024x1024',
+];

@@ -21,8 +21,9 @@ export default function IndexPage() {
       <Border size={16} />
       <Spacing size={8} />
       <Container>
-        <BoxRow onClick={() => push('/complete')}>Complete Mode</BoxRow>
+        <BoxRow onClick={() => push('/completion')}>Completion Mode</BoxRow>
         <BoxRow onClick={() => push('/chat')}>Chat Mode</BoxRow>
+        <BoxRow onClick={() => push('/create-image')}>Create Image</BoxRow>
       </Container>
     </div>
   );
