@@ -11,17 +11,17 @@ const Head: FC = () => {
           content="upgrade-insecure-requests"
         />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta property="og:title" content="OpenAI GPT 프로젝트" />
+        <meta property="og:title" content="Open AI API Starter" />
         <meta property="locale" content="ko_KR" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://openai-gpt-project.vercel.app"
+          content="https://openai-gpt-project.vercel.app/"
         />
         <meta property="og:site_name" content="Exam Bomb" />
         <meta property="og:iamge" content="" />
-        <meta property="og:description" content="OpenAI GPT 프로젝트" />
+        <meta property="og:description" content="Open AI API Starter" />
         <link type="image/x-icon" rel="icon" href="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
@@ -32,10 +32,10 @@ const Head: FC = () => {
           rel="stylesheet"
         />
 
-        <meta property="title" content="OpenAI GPT 프로젝트" />
+        <meta property="title" content="Open AI API Starter" />
         <meta name="author" content="Yu Hayoung" />
-        <meta name="description" content="OpenAI GPT 프로젝트" />
-        <title>OpenAI GPT 프로젝트</title>
+        <meta name="description" content="Open AI API Starter" />
+        <title>Open AI API Starter</title>
       </NextHead>
     </>
   );

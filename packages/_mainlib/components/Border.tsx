@@ -6,7 +6,7 @@ export default function Border({ size }: { size: number }) {
       style={{
         flex: 'none',
         height: size,
-        background: colors.grayBackground,
+        background: colors.gray100,
       }}
     />
   );

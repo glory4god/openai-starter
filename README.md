@@ -7,7 +7,7 @@
 - Me : Can you introduce your project?
 - AI : Open AI Starter is a template project that allows users to quickly and easily integrate Open AI's AI services into their own projects. The project provides a simple framework for using Open AI's services to create chatbots, completion services, and image creation using GPT models. All you need to do is get an API key from Open AI and you're ready to go! This is perfect for developers who want to explore the capabilities of Open AI's AI services without having to write any code from scratch.
 
-[More Details](https://nextjs.org/)
+[More Details](https://openai-starter-docs.vercel.app/)
 
 ### Preparation
 

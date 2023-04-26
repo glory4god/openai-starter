@@ -10,7 +10,7 @@ export default function IndexPage() {
   return (
     <div className="bg-white">
       <Spacing size={20} />
-      <Top3 color={colors.gray900}>{`OpenAI - Project`}</Top3>
+      <Top3 color={colors.gray900}>{`OpenAI - Starter`}</Top3>
       <Spacing size={48} />
       <Border size={16} />
       <Spacing size={8} />
