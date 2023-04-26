@@ -9,7 +9,7 @@ import {
   TextArea,
 } from 'mainlib/components';
 import { colors } from 'mainlib/constants/colors';
-import { Top03 } from 'mainlib/components/Top';
+import { Top3 } from 'mainlib/components/Top';
 import { Form } from 'ui/Layout';
 import { OpenAiCompleteModels } from '@/frontend/constants/openai';
 import { useCompletionAI, useForm } from '@/frontend/hooks';
@@ -47,7 +47,7 @@ export default function CompletionPage() {
     <>
       <Header onBackClick={() => push('/')} />
       <div className="bg-white">
-        <Top03 color={colors.gray900}>{`OpenAI - Complete Mode`}</Top03>
+        <Top3 color={colors.gray900}>{`OpenAI - Complete Mode`}</Top3>
         <Spacing size={32} />
         <Border size={16} />
         <Form>

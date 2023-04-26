@@ -105,6 +105,4 @@ export const colors = {
   whiteOpacity800: 'rgba(253, 253, 254, 0.89)',
   whiteOpacity900: 'rgba(255, 255, 255, 1)',
   background: white,
-  darkBackground: '#17171c',
-  grayBackground: gray100,
 };

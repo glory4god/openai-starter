@@ -7,11 +7,11 @@ interface Props
   className?: string;
 }
 
-export default function Top03({ className, children }: Props) {
+export default function Top2({ className, children }: Props) {
   return (
     <h3
-      className={clsx(className, topStyle, 'pt-6 text-[22px]')}
-      style={{ wordBreak: 'keep-all', lineHeight: '31px' }}>
+      className={clsx(className, topStyle, 'pt-6 text-[26px]')}
+      style={{ wordBreak: 'keep-all', lineHeight: '35px' }}>
       {children}
     </h3>
   );

@@ -1,5 +1,3 @@
-
-
 .box-row {
   position: relative;
   display: inline-flex;
@@ -43,6 +41,13 @@
   .box-row:not(:disabled):not(.disabled):active {
     background-color: #f2f4f6;
     transform: scale(0.97);
+  }
+}
+
+@media (pointer: fine) {
+  .box-row:not(:disabled):not(.disabled):hover {
+    background-color: #f2f4f6;
+    transform: scale(0.99);
   }
 }
 

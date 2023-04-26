@@ -1,4 +1,4 @@
-export { default as Top02 } from './Top02';
-export { default as Top03 } from './Top03';
-export { default as Top04 } from './Top04';
-export { default as Top05 } from './Top05';
+export { default as Top2 } from './Top2';
+export { default as Top3 } from './Top3';
+export { default as Top4 } from './Top4';
+export { default as Top5 } from './Top5';

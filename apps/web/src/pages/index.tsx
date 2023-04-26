@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Border, BoxRow, Container, Spacing } from 'mainlib/components';
-import { Top03 } from 'mainlib/components/Top';
+import { Top3 } from 'mainlib/components/Top';
 import { colors } from 'mainlib/constants/colors';
 
 export default function IndexPage() {
@@ -10,7 +10,7 @@ export default function IndexPage() {
   return (
     <div className="bg-white">
       <Spacing size={20} />
-      <Top03 color={colors.gray900}>{`OpenAI - Project`}</Top03>
+      <Top3 color={colors.gray900}>{`OpenAI - Project`}</Top3>
       <Spacing size={48} />
       <Border size={16} />
       <Spacing size={8} />

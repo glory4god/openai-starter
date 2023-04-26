@@ -7,7 +7,7 @@ interface Props
   className?: string;
 }
 
-export default function Top04({ className, children }: Props) {
+export default function Top4({ className, children }: Props) {
   return (
     <h3
       className={clsx(className, topStyle, 'pt-4 text-lg')}
