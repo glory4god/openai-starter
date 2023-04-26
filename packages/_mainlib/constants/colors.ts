@@ -1,7 +1,5 @@
 const white = '#ffffff';
 const gray100 = '#f3f4f6';
-const inversegray50 = '#202027';
-const inversegray100 = '#2c2c35';
 
 export const colors = {
   gray50: '#f9fafb',
@@ -106,22 +104,7 @@ export const colors = {
   whiteOpacity700: 'rgba(253, 253, 255, 0.75)',
   whiteOpacity800: 'rgba(253, 253, 254, 0.89)',
   whiteOpacity900: 'rgba(255, 255, 255, 1)',
-  inversegray50,
-  inversegray100,
-  inversegray200: '#3c3c47',
-  inversegray300: '#4d4d59',
-  inversegray400: '#62626d',
-  inversegray500: '#7e7e87',
-  inversegray600: '#9e9ea4',
-  inversegray700: '#c3c3c6',
-  inversegray800: '#e4e4e5',
-  inversegray900: 'rgb(255, 255, 255)',
   background: white,
   darkBackground: '#17171c',
   grayBackground: gray100,
-  darkgrayBackground: '#101013',
-  layeredBackground: white,
-  darkLayeredBackground: inversegray50,
-  floatBackground: white,
-  darkFloatBackground: inversegray100,
 };
