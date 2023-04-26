@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import {
   Border,
   FixedBottomCTA,
-  Header,
   Spacing,
   Text,
   TextArea,
@@ -15,7 +14,7 @@ import { Form } from 'ui/Layout';
 
 import { useChatAIInit, useForm } from '@/frontend/hooks';
 import { OpenAiChatModels } from '@/frontend/constants/openai';
-import { ChatSkeleton } from '@/frontend/components';
+import { ChatSkeleton, Header } from '@/frontend/components';
 import {
   Chattings,
   FrequencyPenalty,

@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { Icon } from 'mainlib/components';
 import { arrowBack } from 'public/svg';
 
 interface Props {
@@ -17,7 +16,7 @@ const Header = ({ onBackClick, left, right }: Props) => {
         left
       ) : (
         <button className={clsx(buttonStyle)} onClick={onBackClick}>
-          <Icon name={arrowBack} size={30} />
+          <img src={arrowBack} width={30} height={30} />
         </button>
       )}
       {right}

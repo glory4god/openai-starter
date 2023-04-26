@@ -20,5 +20,3 @@ export default function App({
     </>
   );
 }
-
-const accessPaths = [undefined, '/', '/start'];

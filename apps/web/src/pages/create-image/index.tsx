@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import {
   Border,
   FixedBottomCTA,
-  Header,
   Spacing,
   Text,
   TextArea,
@@ -14,7 +13,7 @@ import { colors } from 'mainlib/constants/colors';
 import { Form } from 'ui/Layout';
 
 import { useForm, useCreateImageAIInit } from '@/frontend/hooks';
-import { ChatSkeleton } from '@/frontend/components';
+import { ChatSkeleton, Header } from '@/frontend/components';
 import { Chattings } from '@/frontend/components/Chat';
 import { ImageConfig } from '@/frontend/components/CreateImage';
 
