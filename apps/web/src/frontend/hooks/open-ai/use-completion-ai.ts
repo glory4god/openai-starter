@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import { fetcher } from '@/frontend/lib/apis/fetcher';
 
-export default function useBaseAIInit() {
+export default function useCompletionAIInit() {
   const [chattings, setChattings] = useState<Chatting[]>([]);
   const [loading, setLoading] = useState(false);
 

@@ -8,12 +8,12 @@ export default function useCreateImageAIInit() {
   const getCreateImages = useCallback(async (query: CreateImageInit) => {
     if (!query.prompt?.length) return;
     setLoading(true);
-
     try {
       const res = await fetcher<Chatting>(`/openai/create-image`, {
         method: 'POST',
         body: JSON.stringify(query),
       });
+
       setCreateImages((prev) => [
         ...prev,
         {

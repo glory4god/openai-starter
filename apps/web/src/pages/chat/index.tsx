@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
 
 import {
   Border,
-  FixedBottomCTA,
+  FixedBottomButton,
   Spacing,
   Text,
   TextArea,
@@ -12,7 +12,7 @@ import { Top03 } from 'mainlib/components/Top';
 import { colors } from 'mainlib/constants/colors';
 import { Form } from 'ui/Layout';
 
-import { useChatAIInit, useForm } from '@/frontend/hooks';
+import { useChatAI, useForm } from '@/frontend/hooks';
 import { OpenAiChatModels } from '@/frontend/constants/openai';
 import { ChatSkeleton, Header } from '@/frontend/components';
 import {
@@ -37,8 +37,17 @@ const modelInit = {
 
 export default function ChatPage() {
   const { push } = useRouter();
-  const { chattings, loading, getChattings } = useChatAIInit();
+  const { chattings, loading, getChattings } = useChatAI();
   const { form, setForm, onFormChange } = useForm(modelInit);
+
+  const onSubmit = useCallback(() => {
+    getChattings(form).then((r) =>
+      setForm((p) => ({
+        ...p,
+        messages: [{ role: 'user', name: 'me', content: '' }],
+      })),
+    );
+  }, [form]);
 
   return (
     <>
@@ -91,18 +100,9 @@ export default function ChatPage() {
           />
         </Form>
         <Spacing size={16} />
-        <FixedBottomCTA
-          disabled={loading}
-          onClick={() => {
-            getChattings(form).then((r) =>
-              setForm((p) => ({
-                ...p,
-                messages: [{ role: 'user', name: 'me', content: '' }],
-              })),
-            );
-          }}>
+        <FixedBottomButton disabled={loading} onClick={onSubmit}>
           Submit
-        </FixedBottomCTA>
+        </FixedBottomButton>
       </div>
     </>
   );

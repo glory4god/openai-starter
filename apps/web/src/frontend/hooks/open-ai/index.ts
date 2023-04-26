@@ -1,3 +1,3 @@
-export { default as useBaseAIInit } from './use-base-ai';
-export { default as useChatAIInit } from './use-chat-ai';
-export { default as useCreateImageAIInit } from './use-create-image-ai';
+export { default as useCompletionAI } from './use-completion-ai';
+export { default as useChatAI } from './use-chat-ai';
+export { default as useCreateImageAI } from './use-create-image-ai';

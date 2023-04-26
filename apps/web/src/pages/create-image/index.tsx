@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
 
 import {
   Border,
-  FixedBottomCTA,
+  FixedBottomButton,
   Spacing,
   Text,
   TextArea,
@@ -12,7 +12,7 @@ import { Top03 } from 'mainlib/components/Top';
 import { colors } from 'mainlib/constants/colors';
 import { Form } from 'ui/Layout';
 
-import { useForm, useCreateImageAIInit } from '@/frontend/hooks';
+import { useForm, useCreateImageAI } from '@/frontend/hooks';
 import { ChatSkeleton, Header } from '@/frontend/components';
 import { Chattings } from '@/frontend/components/Chat';
 import { ImageConfig } from '@/frontend/components/CreateImage';
@@ -26,14 +26,20 @@ const modelInit: CreateImageInit = {
 
 export default function CreateImagePage() {
   const { push } = useRouter();
-  const { createImages, loading, getCreateImages } = useCreateImageAIInit();
+  const { createImages, loading, getCreateImages } = useCreateImageAI();
   const { form, setForm, onFormChange } = useForm(modelInit);
+
+  const onSubmit = useCallback(
+    () =>
+      getCreateImages(form).then((r) => setForm((p) => ({ ...p, prompt: '' }))),
+    [form],
+  );
 
   return (
     <>
       <Header onBackClick={() => push('/')} />
       <div className="bg-white">
-        <Top03 color={colors.gray900}>{`OpenAI - Chat Mode`}</Top03>
+        <Top03 color={colors.gray900}>{`OpenAI - Create Image Mode`}</Top03>
         <Spacing size={32} />
         <Border size={16} />
         <Form>
@@ -49,18 +55,9 @@ export default function CreateImagePage() {
           <TextArea name="prompt" value={form.prompt} onChange={onFormChange} />
         </Form>
         <Spacing size={16} />
-        <FixedBottomCTA
-          disabled={loading}
-          onClick={() => {
-            getCreateImages(form).then((r) =>
-              setForm((p) => ({
-                ...p,
-                prompt: '',
-              })),
-            );
-          }}>
+        <FixedBottomButton disabled={loading} onClick={onSubmit}>
           Submit
-        </FixedBottomCTA>
+        </FixedBottomButton>
       </div>
     </>
   );

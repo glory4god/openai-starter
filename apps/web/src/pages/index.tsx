@@ -1,13 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import {
-  Border,
-  BoxRow,
-  Container,
-  FixedBottomCTA,
-  Spacing,
-} from 'mainlib/components';
-import { Top03, Top04 } from 'mainlib/components/Top';
+import { Border, BoxRow, Container, Spacing } from 'mainlib/components';
+import { Top03 } from 'mainlib/components/Top';
 import { colors } from 'mainlib/constants/colors';
 
 export default function IndexPage() {

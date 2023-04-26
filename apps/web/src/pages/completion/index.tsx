@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
 
 import {
   Border,
-  FixedBottomCTA,
+  FixedBottomButton,
   Spacing,
   Text,
   TextArea,
@@ -12,7 +12,7 @@ import { colors } from 'mainlib/constants/colors';
 import { Top03 } from 'mainlib/components/Top';
 import { Form } from 'ui/Layout';
 import { OpenAiCompleteModels } from '@/frontend/constants/openai';
-import { useBaseAIInit, useForm } from '@/frontend/hooks';
+import { useCompletionAI, useForm } from '@/frontend/hooks';
 import { ChatSkeleton, Header } from '@/frontend/components';
 import {
   Chattings,
@@ -36,8 +36,12 @@ const modelInit = {
 
 export default function CompletionPage() {
   const { push } = useRouter();
-  const { chattings, loading, getChattings } = useBaseAIInit();
+  const { chattings, loading, getChattings } = useCompletionAI();
   const { form, setForm, onFormChange } = useForm(modelInit);
+
+  const onSubmit = useCallback(() => {
+    getChattings(form).then((r) => setForm((p) => ({ ...p, prompt: '' })));
+  }, [form]);
 
   return (
     <>
@@ -79,15 +83,9 @@ export default function CompletionPage() {
           <TextArea name="prompt" value={form.prompt} onChange={onFormChange} />
         </Form>
         <Spacing size={16} />
-        <FixedBottomCTA
-          disabled={loading}
-          onClick={() => {
-            getChattings(form).then((r) =>
-              setForm((p) => ({ ...p, prompt: '' })),
-            );
-          }}>
+        <FixedBottomButton disabled={loading} onClick={onSubmit}>
           Submit
-        </FixedBottomCTA>
+        </FixedBottomButton>
       </div>
     </>
   );

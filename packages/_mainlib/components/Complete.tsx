@@ -1,4 +1,4 @@
-import FixedBottomCTA from './FixedBottomCTA';
+import FixedBottomButton from './FixedBottomButton';
 import Top02 from './Top/Top02';
 
 interface Props {
@@ -23,7 +23,7 @@ export default function Complete({ title, onSubmit }: Props) {
           alt=""
         />
       </div>
-      <FixedBottomCTA onClick={onSubmit}>제출하기</FixedBottomCTA>
+      <FixedBottomButton onClick={onSubmit}>제출하기</FixedBottomButton>
     </>
   );
 }

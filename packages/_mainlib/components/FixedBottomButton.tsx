@@ -1,5 +1,5 @@
 import { ComponentProps, ComponentType } from 'react';
-import Button from '../components/Button';
+import Button from './Button';
 
 type TypeAProps = ComponentProps<typeof Button>;
 function TypeA(props: TypeAProps) {
@@ -32,9 +32,9 @@ function TypeB({ leftButton, rightButton }: TypeBProps) {
   );
 }
 
-const FixedBottomCTA = TypeA as ComponentType<TypeAProps> & {
+const FixedBottomButton = TypeA as ComponentType<TypeAProps> & {
   TypeB: ComponentType<TypeBProps>;
 };
-FixedBottomCTA.TypeB = TypeB;
+FixedBottomButton.TypeB = TypeB;
 
-export default FixedBottomCTA;
+export default FixedBottomButton;

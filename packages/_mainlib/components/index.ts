@@ -3,7 +3,7 @@ export { default as BigInput } from './BigInput';
 export { default as Button } from './Button';
 export { default as Complete } from './Complete';
 export { default as Container } from './Container';
-export { default as FixedBottomCTA } from './FixedBottomCTA';
+export { default as FixedBottomButton } from './FixedBottomButton';
 export { default as Select } from './Select';
 export { default as Spacing } from './Spacing';
 export { default as Border } from './Border';
