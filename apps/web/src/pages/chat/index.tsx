@@ -28,10 +28,10 @@ import {
 const modelInit = {
   model: 'gpt-3.5-turbo-0301',
   messages: [],
-  max_tokens: 512,
+  max_tokens: 200,
   temperature: 0.7,
   presence_penalty: 0,
-  frequency_penalty: 0,
+  frequency_penalty: 0.6,
   top_p: 1,
 } as ChatAIInit;
 
